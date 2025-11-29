@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-4 fw-bold">Admin Dashboard</h3>
+
+<div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4 text-center border-0" style="border-radius: 12px;">
+            <h5 class="fw-bold mb-3">Manage Students</h5>
+            <a href="{{ url_for('admin.students') }}" class="btn btn-primary btn-lg w-100">
+                <i class="bi bi-people-fill"></i> Open
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4 text-center border-0" style="border-radius: 12px;">
+            <h5 class="fw-bold mb-3">Manage Courses</h5>
+            <a href="{{ url_for('admin.courses') }}" class="btn btn-success btn-lg w-100">
+                <i class="bi bi-journal-bookmark-fill"></i> Open
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4 text-center border-0" style="border-radius: 12px;">
+            <h5 class="fw-bold mb-3">Assign Courses</h5>
+            <a href="{{ url_for('admin.assign_course') }}" class="btn btn-warning btn-lg w-100 text-dark">
+                <i class="bi bi-check2-square"></i> Open
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

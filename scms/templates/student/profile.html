@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="fw-bold mb-4">My Profile</h3>
+
+<div class="card shadow-sm p-4 mb-4" style="border-radius: 12px;">
+    <h4 class="fw-bold mb-2">{{ student.name }}</h4>
+    <p><strong>Email:</strong> {{ current_user.email }}</p>
+</div>
+
+<h4 class="fw-bold">My Courses</h4>
+
+{% if enrollments %}
+<table class="table table-hover shadow-sm bg-white" style="border-radius: 10px; overflow: hidden;">
+    <thead class="table-dark">
+        <tr>
+            <th style="width: 60px;">#</th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for e in enrollments %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ e.course.course_name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-warning shadow-sm">
+    You are not enrolled in any courses.
+</div>
+{% endif %}
+
+<a href="{{ url_for('student.dashboard') }}" class="btn btn-secondary mt-3">
+    Back to Dashboard
+</a>
+
+{% endblock %}

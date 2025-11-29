@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+
+        <div class="card shadow-lg p-4" style="border-radius: 15px;">
+            <h3 class="text-center mb-4">Create Account</h3>
+
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                <div class="mb-3">
+                    {{ form.username.label(class="form-label fw-bold") }}
+                    {{ form.username(class="form-control form-control-lg", placeholder="Enter full name") }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form.email.label(class="form-label fw-bold") }}
+                    {{ form.email(class="form-control form-control-lg", placeholder="Enter email") }}
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ form.password.label(class="form-label fw-bold") }}
+                        {{ form.password(class="form-control form-control-lg", placeholder="Enter password") }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        {{ form.confirm_password.label(class="form-label fw-bold") }}
+                        {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm password") }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    {{ form.role.label(class="form-label fw-bold") }}
+                    {{ form.role(class="form-control form-control-lg") }}
+                </div>
+
+                <button class="btn btn-success w-100 btn-lg mt-3">Register</button>
+
+                <p class="text-center mt-3">
+                    Already have an account?
+                    <a href="{{ url_for('auth.login') }}">Login</a>
+                </p>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="fw-bold mb-4">Student Dashboard</h3>
+
+<div class="card shadow-sm p-4 mb-4" style="border-radius: 12px;">
+    <h4 class="fw-semibold mb-2">Welcome, {{ student.name }} 👋</h4>
+    <p class="mb-1"><strong>Email:</strong> {{ current_user.email }}</p>
+
+    <a href="{{ url_for('student.profile') }}" class="btn btn-primary mt-3">
+        <i class="bi bi-person-circle"></i> View Profile
+    </a>
+</div>
+
+<h4 class="fw-bold mb-3">Your Courses</h4>
+
+{% if enrollments %}
+<table class="table table-hover shadow-sm bg-white" style="border-radius: 10px; overflow: hidden;">
+    <thead class="table-dark">
+        <tr>
+            <th style="width: 60px;">#</th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for e in enrollments %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ e.course.course_name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<div class="alert alert-info shadow-sm">
+    You have not been assigned to any courses yet.
+</div>
+{% endif %}
+
+{% endblock %}

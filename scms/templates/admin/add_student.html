@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="mb-4 fw-bold">Add Student</h3>
+
+<div class="card shadow-sm p-4" style="border-radius: 12px;">
+    <form method="POST">
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Student Name</label>
+            <input type="text" name="name" class="form-control form-control-lg" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" name="email" class="form-control form-control-lg" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Password</label>
+            <input type="password" name="password" class="form-control form-control-lg" required>
+        </div>
+
+        <button class="btn btn-primary btn-lg w-100 mt-2">Create Student</button>
+        <a href="{{ url_for('admin.students') }}" class="btn btn-secondary w-100 mt-2">Back</a>
+    </form>
+</div>
+
+{% endblock %}
