@@ -48,9 +48,6 @@ Role-based access control was added on top of this structure to ensure that only
 Security features were added to improve the code beyond what the tutorials provided. 
 These include password hashing, CSRF protection on forms, login protection using decorators, and environment-based configuration for sensitive values such as the secret key. 
 The final application structure keeps the admin, student, and authentication functions separated into different files and folders, which makes the system organised, readable, and easier to maintain.
-
-
-
 The rollout of the Student Course Management System was a systematic process whereby each feature would be introduced to enable modularity, readability, and testability.
 It was written in Flask, with an application factory pattern that enabled configuration, database initialization, and blueprint registration to be structured.
 The authentication blueprint was used to deal with login, registration, and log out functions. The passwords were encrypted using the bcrypt library which saved hashed passwords in place of plain text passwords.
@@ -58,3 +55,11 @@ This method meant that password disclosure was unlikely even in a situation wher
 Role based redirection was applied in the login feature with a conditional test to redirect the administrators and the students to their own dashboard.
 The administrative blueprint introduced the CRUD functions of the students and courses. Student creation involved the generation of a related user record using SQLAlchemy models
 The course creation encompassed entry of new courses. Enrolment was made using an association table which formed the association between the courses and the students.
+
+
+Usage And GuideLines Instructions.
+
+
+First any normal user can creat an account with a name and user email, whcih they will later uses to login and log out of the system. Secondly they can login very easily using that password and email what they can do now is very simple. There are two kind of privilleges that are assigned to the users one as student and other is Admin role.
+The Admin can easily make any certain kind of changes like adding or removing studnets, 
+
