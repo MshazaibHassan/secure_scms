@@ -1,6 +1,6 @@
 READ.md 
 
-The youtube video link that helped with flusk login https://www.youtube.com/watch?v=cYWiDiIUxQc 
+The youtube video link that helped with flusk login https://www.youtube.com/watch?v=cYWiDiIUxQc ( This is not my youtube video link MY LINK IS IN THE WORD FILE>>>>) 
 
 Overall, the tutorials acted as learning guides to understand core Flask concepts. 
 The code from them was not copied directly but was adapted, expanded, and combined into a more complete and secure student course management system. Each video contributed a different part: user login logic, CRUD operations, and database design. These pieces were then integrated to create a fully functioning system with role-based access and secure handling of user and course data.
