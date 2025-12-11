@@ -60,7 +60,7 @@ The course creation encompassed entry of new courses. Enrolment was made using a
 Usage And GuideLines Instructions.
 
 
-First any normal user can creat an account with a name and user email, whcih they will later uses to login and log out of the system, while creatring the account user can choose to be either student or Admin. Secondly they can login very easily using that password and email what they can do now is very simple. There are two kind of privilleges that are assigned to the users one as student and other is Admin role.
+First any normal user can creat an account with a name and user email, whcih they will later uses to login and log out of the system,  Secondly they can login very easily using that password and email what they can do now is very simple. There are two kind of privilleges that are assigned to the users one as student and other is Admin role.
 The Admin can easily make any certain kind of changes like adding or removing studnets, the admin can also assign the courses to the students, the admin can also creat the courses. 
 On the other hand student have few privilages compared to the Admin role. Their privileges are decideded by the Admin.
 
