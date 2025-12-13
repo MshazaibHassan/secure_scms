@@ -1,6 +1,8 @@
-READ.md 
+READ.md
+Muhammad ShazaIb Hassan (24225541)
 Introduction (Overview)
 The youtube video link that helped with flusk login https://www.youtube.com/watch?v=cYWiDiIUxQc ( This is not my youtube video link MY LINK IS IN THE WORD FILE>>>>) 
+
 The code for this project was developed by using three YouTube tutorials as the main learning references. 
 The first video, which explained how to build a registration and login system in Flask, was used to understand how to create user accounts, store passwords securely, and manage user login sessions. 
 From this video, the patterns for the register, login, and logout functions were adapted and expanded. Password hashing, form validation, and the use of Flask-Login were also learned from this tutorial. 
