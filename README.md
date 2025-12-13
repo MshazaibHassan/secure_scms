@@ -57,19 +57,29 @@ The administrative blueprint introduced the CRUD functions of the students and c
 The course creation encompassed entry of new courses. Enrolment was made using an association table which formed the association between the courses and the students.
 
 
-Usage And GuideLines Instructions.
+(Usage And GuideLines Instructions)
 
 
 First any normal user can creat an account with a name and user email, whcih they will later uses to login and log out of the system,  Secondly they can login very easily using that password and email what they can do now is very simple. There are two kind of privilleges that are assigned to the users one as student and other is Admin role.
 The Admin can easily make any certain kind of changes like adding or removing studnets, the admin can also assign the courses to the students, the admin can also creat the courses. 
 On the other hand student have few privilages compared to the Admin role. Their privileges are decideded by the Admin.
 
-Testing 
+(Testing) 
 
 The system was tested to ensure that operations were as intended and that security improvements worked. 
 Functional testing was started by testing the authentication process that includes successful login to both roles and proper redirection to the corresponding dashboard. 
 Administrative CRUD operations were checked by creating student accounts, adding courses, assigning courses and ensuring that the database showed the expected changes. 
 Student testing was aimed at the dashboard display accuracy and the visibility of assigned courses.
+
+(Security improvments)
+
+Threat modelling was applied to find possible vulnerabilities at the design. 
+A high-level data flow description puts the browser as the predominant external object that engages with the Flask application via login, registration, and management forms. 
+These requests are relayed to the application logic which updates or reads the records in the database. The primary data are the authentication data, course data and student profile.
+The logic layer is achieved by using Flask blueprints to provide authentication, administration and student functionality. 
+These blueprints assist in modularity and mitigate the chances of accidental component interactions. 
+The data layer is based on SQLAlchemy models of users, students, courses, and enrolments, which are represented by distinctively related tables. 
+Such structure ensures relational integrity and makes privilege checks and query validation easier.
 
 
 
